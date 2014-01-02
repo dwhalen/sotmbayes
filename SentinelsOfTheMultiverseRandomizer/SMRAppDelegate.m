@@ -7,16 +7,17 @@
 //
 
 #import "SMRAppDelegate.h"
+#include "SMRDataClass.h"
+#include "SMRInitialize.h"
 
 @implementation SMRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+    // Initialize the game
+    [SMRInitialize initializeSMR];
+    
+    return YES; // I'm not sure why we return YES, but let's do it anyway.
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
