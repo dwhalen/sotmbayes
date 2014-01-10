@@ -92,7 +92,8 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [[[SMRGlobals singleton] pastGames] removeObjectAtIndex:indexPath.row];
+        NSMutableArray *pastGames = [[SMRGlobals singleton] pastGames];
+        [pastGames removeObjectAtIndex:([pastGames count] - indexPath.row - 1)];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     //else if (editingStyle == UITableViewCellEditingStyleInsert) {
