@@ -1,0 +1,34 @@
+<html> 
+  <HEAD>
+    <TITLE>SotM Accumulated Data</TITLE>
+  </HEAD>
+
+    <body>
+
+<table>
+    {% for game in gameList%}
+    <tr>
+    <td>{{game.deviceID}}</td>
+    <td>{{game.gameID}}</td>
+    <td>{{game.generatedDate}}</td>
+    <td>{{game.finishedDate}}</td>
+    <td>{{game.won}}</td>
+    <td>{{game.numberOfHeroes}}</td>
+    <td>{{game.hero1}}</td>
+    <td>{{game.hero2}}</td>
+    <td>{{game.hero3}}</td>
+    <td>{{game.hero4}}</td>
+    <td>{{game.hero5}}</td>
+    <td>{{game.villain}}</td>
+    <td>{{game.villain1}}</td>
+    <td>{{game.villain2}}</td>
+    <td>{{game.villain3}}</td>
+    <td>{{game.villain4}}</td>
+    <td>{{game.villain5}}</td>    
+    <td>{{game.environment}}</td>
+    </tr>
+    {% endfor %} 
+</table>
+
+    </body>
+</html>
